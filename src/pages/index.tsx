@@ -1,11 +1,12 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import Link from 'next/link';
 import Footer from '../components/footer';
 import Navbar from '../components/navbar'
+import { HiArrowRight } from "react-icons/hi";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="relative min-h-screen">
       <Head>
         <title>Surge</title>
         <meta name="description" content="Surge" />
@@ -20,9 +21,37 @@ export default function Home() {
         <Navbar />
       </nav>
 
-      <main className="">hello Welcome</main>
+      <main className="">
+        {/* Hiring */}
+        <section className="px-5 md:px-20 xl:px-56 grid grid-cols-1 md:grid-cols-3 content-center h-96 py-20 bg-lightGray">
+          <div className="flex flex-col justify-center gap-8 h-[inherit]">
+            <h1 className="text-mainColor text-lg sm:text-3xl md:text-[40px] font-semibold">
+              We’re hiring
+            </h1>
+            <p className="text-grayText md:w-[80%]">
+              Learn about our culture and how we’ve grown up to 250+ people.
+            </p>
+            <Link
+              href={""}
+              className="text-mainRed font-semibold flex gap-3 items-center"
+            >
+              <span>Careers</span>
+              <HiArrowRight />
+            </Link>
+            <Link
+              href={""}
+              className="text-mainRed font-semibold flex gap-3 items-center -mt-3"
+            >
+              <span>See available positions</span>
+              <HiArrowRight />
+            </Link>
+          </div>
+          {/* Highring video */}
+          <div className="col-span-2 grid justify-items-center content-center h-[inherit] bg-blue-200"></div>
+        </section>
+      </main>
 
-      <footer className="bg-mainColor px-5 md:px-20 xl:px-56 py-5 pt-10">
+      <footer className="absolute bottom-0 w-full bg-mainColor px-5 md:px-20 xl:px-56 pt-14">
         <Footer />
       </footer>
     </div>
