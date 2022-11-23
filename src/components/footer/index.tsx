@@ -7,12 +7,12 @@ import { IoLogoYoutube } from "react-icons/io";
 
 const Footer = () => {
   return (
-    <div className="grid grid-cols-1 divide-y gap-10 divide-gray-500">
+    <div className="grid grid-cols-1 divide-y-[0.1px] gap-10 divide-gray-700">
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 w-full">
         {footerLinks.map((item, index) => (
           <div key={index} className="links-content mt-5">
             <h2
-              className="text-grayText uppercase"
+              className="text-grayText uppercase font-semibold mb-5"
               aria-labelledby="Sidebar Links Category"
               aria-label={item.title}
             >
@@ -29,8 +29,8 @@ const Footer = () => {
           </div>
         ))}
       </div>
-      <div className="flex justify-between items-center py-5">
-        <span className="text-grayText">© Copyright 2022 Surge Global.</span>
+      <div className="flex justify-between items-center py-4">
+        <span className="text-grayText font-semibold">© Copyright 2022 Surge Global.</span>
         <div className="social-links flex gap-5 items-center">
           <Link href={""} className="scale-150 text-grayText">
             <FaFacebookSquare />
