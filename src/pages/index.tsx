@@ -23,20 +23,22 @@ export default function Home() {
           content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
         />
       </Head>
-
+      <div className="info text-center underline text-lightGray p-2">
+        <Link href={""}>We&apos;re hiring now - Learn about our culture</Link>
+      </div>
       <nav className="bg-mainColor px-5 md:px-20 xl:px-56 h-16 md:h-20 sticky w-full z-20 top-0 left-0">
         <Navbar />
       </nav>
 
       <main className="relative">
         {/* Hero Section */}
-        <section className="relative bg-mainColor">
+        <section className="relative bg-mainColor h-full max-h-full sm:h-auto">
           <Image
             src={MeshBackground}
             alt="Mesh Background"
-            className="animated absolute bottom-0 h-full w-full object-center object-cover overflow-visible z-0"
+            className="animated absolute bottom-0 h-full w-full object-center object-cover overflow-visible z-0 brightness-50"
           />
-          <div className="relative sm:px-5 md:px-20 xl:px-56 md:py-10 md:pb-5 lg:py-16 lg:pb-5 w-full h-full z-10">
+          <div className="relative sm:px-5 md:px-20 xl:px-56 w-full h-full z-10 flex flex-col justify-between gap-10 md:gap-14 lg:gap-20">
             <div className="md:w-[80%] lg:w-[65%] mx-auto text-center py-10">
               <h1 className="text-lightGray text-4xl lg:text-7xl font-semibold text-center md:leading-loose">
                 Your Product Engineering + Growth Marketing
@@ -44,16 +46,16 @@ export default function Home() {
               <h1 className="animated text-4xl lg:text-7xl font-semibold text-center">
                 Powerhouse
               </h1>
-              <p className="text-lightGray w-[80%] lg:w-[80%] mx-auto text-center text-lg my-10">
+              <p className="text-lightGray w-[90%] sm:w-[80%] lg:w-[70%] mx-auto md:font-semibold text-center md:text-lg mt-4 sm:mt-6 md:mt-10 lg:mt-16">
                 Surge provides everything from expert advice to dedicated
                 staffing, taking your business from idea to implementation.
               </p>
             </div>
-            <div className="flex flex-col items-center justify-center w-full mt-10 lg:mt-14">
+            <div className="flex flex-col items-center justify-center w-full">
               <span className="uppercase text-lightPurple py-3">
                 Experts in
               </span>
-              <div className="images flex justify-between gap-5 mb-2 md:mb-0 w-full overflow-hidden overflow-x-auto overscroll-none">
+              <div className="images flex justify-between gap-5 pb-2 md:mb-0 w-full overflow-hidden overflow-x-auto overscroll-none">
                 {ExpertServiceData.map((item, index) => (
                   <Image
                     key={index}
@@ -98,15 +100,13 @@ export default function Home() {
               We work with the best in the business with 100+ marketers,
               developers, and strategists helping achieve client goals.
             </p>
-            <div className="companies-logo flex items-center justify-center gap-5 gap-x-14 my-3 mb-10 md:mb-0 md:mt-14 overflow-hidden overflow-x-auto overscroll-none">
+            <div className="companies-logo flex items-center justify-center gap-x-14 my-3 mb-10 md:mb-0 md:mt-14 overflow-hidden overflow-x-auto overscroll-none">
               {CompaniesData.map((item, index) => (
                 <Link key={index} href={"#"}>
                   <Image
                     src={item.img}
                     alt={item.name}
-                    width={100}
-                    height={100}
-                    className="transition-all duration-100 grayscale hover:grayscale-0 h-full w-full"
+                    className="relative transition-all duration-100 grayscale hover:grayscale-0 h-full w-full"
                   />
                 </Link>
               ))}
