@@ -98,7 +98,7 @@ export default function Home() {
               We work with the best in the business with 100+ marketers,
               developers, and strategists helping achieve client goals.
             </p>
-            <div className="companies-logo flex items-center justify-center gap-5 gap-x-14 my-3 mb-10 md:mb-0 md:mt-14">
+            <div className="companies-logo flex items-center justify-center gap-5 gap-x-14 my-3 mb-10 md:mb-0 md:mt-14 overflow-hidden overflow-x-auto overscroll-none">
               {CompaniesData.map((item, index) => (
                 <Link key={index} href={"#"}>
                   <Image
