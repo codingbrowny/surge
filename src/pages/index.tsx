@@ -31,7 +31,11 @@ export default function Home() {
       <main className="relative">
         {/* Hero Section */}
         <section className="relative bg-mainColor">
-            <Image src={MeshBackground} alt="Mesh Background" className="animated absolute bottom-0 h-full w-full object-center object-cover overflow-visible z-0" />
+          <Image
+            src={MeshBackground}
+            alt="Mesh Background"
+            className="animated absolute bottom-0 h-full w-full object-center object-cover overflow-visible z-0"
+          />
           <div className="relative sm:px-5 md:px-20 xl:px-56 md:py-10 md:pb-5 lg:py-16 lg:pb-5 w-full h-full z-10">
             <div className="md:w-[80%] lg:w-[65%] mx-auto text-center py-10">
               <h1 className="text-lightGray text-4xl lg:text-7xl font-semibold text-center md:leading-loose">
@@ -100,6 +104,8 @@ export default function Home() {
                   <Image
                     src={item.img}
                     alt={item.name}
+                    width={100}
+                    height={100}
                     className="transition-all duration-100 grayscale hover:grayscale-0 h-full w-full"
                   />
                 </Link>
