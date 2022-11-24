@@ -3,9 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
+import Slider from "../components/slider";
+import { FiPhoneCall } from "react-icons/fi";
 import { HiArrowRight } from "react-icons/hi";
-import {FiPhoneCall} from "react-icons/fi"
-import Experts from "../assets/images/experts-group.png"
+import ProductCard from "../components/product-card";
+import Experts from "../assets/images/experts-group.png";
+import MeshBackground from "../assets/images/hero.svg"
+import { CompaniesData, ExpertServiceData, ServiceData } from "../assets/data/data";
 
 export default function Home() {
   return (
@@ -24,12 +28,92 @@ export default function Home() {
         <Navbar />
       </nav>
 
-      <main className="">
+      <main className="relative">
+        {/* Hero Section */}
+        <section className="relative bg-mainColor">
+            <Image src={MeshBackground} alt="Mesh Background" className="animated absolute bottom-0 h-full w-full object-center object-cover overflow-visible z-0" />
+          <div className="relative sm:px-5 md:px-20 xl:px-56 md:py-10 md:pb-5 lg:py-16 lg:pb-5 w-full h-full z-10">
+            <div className="md:w-[80%] lg:w-[65%] mx-auto text-center py-10">
+              <h1 className="text-lightGray text-4xl lg:text-7xl font-semibold text-center md:leading-loose">
+                Your Product Engineering + Growth Marketing
+              </h1>
+              <h1 className="animated text-4xl lg:text-7xl font-semibold text-center">
+                Powerhouse
+              </h1>
+              <p className="text-lightGray w-[80%] lg:w-[80%] mx-auto text-center text-lg my-10">
+                Surge provides everything from expert advice to dedicated
+                staffing, taking your business from idea to implementation.
+              </p>
+            </div>
+            <div className="flex flex-col items-center justify-center w-full mt-10 lg:mt-28">
+              <span className="uppercase text-lightPurple py-3">
+                Experts in
+              </span>
+              <div className="images flex justify-between gap-5 mb-2 md:mb-0 w-full overflow-hidden overflow-x-auto overscroll-none">
+                {ExpertServiceData.map((item, index) => (
+                  <Image
+                    key={index}
+                    src={item.img}
+                    alt={item.name}
+                    width={100}
+                    height={100}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="relative sm:px-5 md:px-20 xl:px-56 md:py-10 lg:py-16">
+          <div className="mt-6 sm:w-[80%] lg:w-[60%] mx-auto text-center px-5 sm:px-10 md:px-0">
+            <h1 className="text-2xl md:text-4xl font-semibold text-mainColor leading-8">
+              Great teams are built on product + market expertise, we’ve got
+              both
+            </h1>
+            <p className="text-grayText mt-6">
+              Over 250 consultants with expertise ranging from Hemp to SaaS,
+              from Boston to Dubai.
+            </p>
+          </div>
+        </section>
+
+        {/* Services */}
+        <section className="px-3 sm:px-5 md:px-20 xl:px-56 grid grid-cols-1 lg:grid-cols-2 gap-10 my-10">
+          {ServiceData.map((item, index) => (
+            <ProductCard key={index} data={item} />
+          ))}
+        </section>
+
+        {/* Achivement and Testimony */}
+        <section className="relative sm:px-5 md:px-20 xl:px-56 md:py-10 lg:py-16">
+          <div className="text-center my-4 sm:my-6 md:mt-10 md:mb-5">
+            <h2 className="text-lg sm:text-2xl md:text-4xl font-semibold text-mainColor">
+              Don’t take our word for it
+            </h2>
+            <p className="text-grayText mt-6 md:w-[80%] lg:w-[60%] mx-auto">
+              We work with the best in the business with 100+ marketers,
+              developers, and strategists helping achieve client goals.
+            </p>
+            <div className="companies-logo flex items-center justify-center gap-5 gap-x-14 my-3 mb-10 md:mb-0 md:mt-14">
+              {CompaniesData.map((item, index) => (
+                <Link key={index} href={"#"}>
+                  <Image
+                    src={item.img}
+                    alt={item.name}
+                    className="transition-all duration-100 grayscale hover:grayscale-0 h-full w-full"
+                  />
+                </Link>
+              ))}
+            </div>
+          </div>
+          <Slider />
+        </section>
+
         <section className="flex flex-col items-center justify-center gap-5 h-fit md:h-96 py-20">
-          <h1 className="text-mainColor text-lg sm:text-3xl md:text-[46px] font-semibold">
+          <h1 className="text-mainColor -mb-5 md:mb-0 text-3xl md:text-[46px] font-semibold">
             How can we help?
           </h1>
-          <span className="text-mainColor relative py-2 animated text-lg sm:text-3xl md:text-[46px] font-semibold">
+          <span className="text-mainColor relative text-center px-3 py-2 animated text-3xl md:text-[46px] font-semibold">
             Talk to our experts today.
           </span>
           <div className="experts">
@@ -40,7 +124,7 @@ export default function Home() {
               width={150}
             />
           </div>
-          <span className="text-grayText font-semibold">
+          <span className="text-grayText font-semibold text-center px-5">
             Experts in marketing, analytics, engineering, etc.
           </span>
           <button className="flex items-center gap-4 justify-between p-4 font-semibold text-white my-5 relative top-0 hover:after:bg-gradient-to-r hover:after:from-[#7d8ef7] hover:after:to-mainRed shadow-md z-[1] transition-all duration-200 ease-in-out after:bg-mainRed after:transition-all after:duration-200 after:ease-in-out after:absolute after:-z-[1] after:top-0 after:right-0 after:left-0 after:bottom-0 after:border-none hover:after:scale-[1.05]">
@@ -51,9 +135,9 @@ export default function Home() {
         </section>
 
         {/* Hiring Section */}
-        <section className="relative px-5 md:px-20 xl:px-56 grid grid-cols-1 md:grid-cols-3 content-center h-fit md:h-96 py-20 bg-lightGray">
-          <div className="flex flex-col justify-center gap-8 h-[inherit]">
-            <h1 className="text-mainColor text-lg sm:text-3xl md:text-[40px] font-semibold">
+        <section className="relative px-5 md:px-20 xl:px-56 md:h-96 pb-20 py-20 grid grid-cols-1 md:grid-cols-3 content-center bg-lightGray">
+          <div className="flex flex-col justify-center gap-4 sm:gap-8 h-full">
+            <h1 className="text-mainColor text-3xl md:text-[40px] font-semibold">
               We’re hiring
             </h1>
             <p className="text-grayText md:w-[80%]">
@@ -75,7 +159,18 @@ export default function Home() {
             </Link>
           </div>
           {/* Highring video */}
-          <div className="col-span-2 grid justify-items-center content-center h-[inherit] bg-blue-200"></div>
+          <div className="relative col-span-2 flex flex-col justify-center items-center mt-4 md:mt-0">
+            <div className="relative md:h-4/5 lg:h-3/5">
+              <video
+                loop
+                className="relative max-h-full h-full md:h-full w-full"
+                autoPlay={true}
+              >
+                <source src="/videos/surge-hiring.webm" type="video/webm" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
         </section>
       </main>
 
