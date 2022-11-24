@@ -12,7 +12,7 @@ const Navbar = () => {
         <Image src={Logo} alt={"Logo"} />
       </Link>
       <div className="flex items-center md:order-2">
-        <div className="cto hidden md:block">
+        <div className="cto hidden lg:block">
           <Link href={""} className="cto p-3 px-5 bg-white bg-opacity-25">
             Schedule a call
           </Link>
@@ -20,7 +20,7 @@ const Navbar = () => {
         <button
           data-collapse-toggle="navbar-sticky"
           type="button"
-          className="inline-flex items-center p-2 text-sm rounded-lg md:hidden"
+          className="inline-flex items-center p-2 text-sm rounded-lg lg:hidden"
           aria-controls="navbar-sticky"
           aria-expanded="false"
         >
@@ -31,7 +31,7 @@ const Navbar = () => {
         </button>
       </div>
       <div
-        className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+        className="items-center justify-between hidden w-full lg:flex md:w-auto md:order-1"
         id="navbar-sticky"
       >
         <ul className="list-none inline-flex gap-14">

@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
         ))}
       </div>
-      <div className="flex justify-between items-center py-4">
+      <div className="flex justify-between items-center flex-wrap gap-5 py-4">
         <span className="text-grayText font-semibold">© Copyright 2022 Surge Global.</span>
         <div className="social-links flex gap-5 items-center">
           <Link href={""} className="scale-150 text-grayText">

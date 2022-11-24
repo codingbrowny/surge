@@ -37,3 +37,21 @@ body {
     background-position: 200%;
   }
 }
+
+/* .hero-ascent {
+  background-image: url("../src/assets/images/hero.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  overflow: visible !important;
+  animation: meshAnimation 400s linear infinite;
+} */
+/* 
+@keyframes meshAnimation  {
+  0% {transform : perspective( 30px ) rotateY( 0.010deg ) translate(-250px,0px);}
+    50% {transform : perspective( 0px ) rotateY( 0deg )
+translate(-250px,0px);}
+  100% {transform : perspective( 30px ) rotateY( -0.025deg )
+translate(-250px,0px);}
+    
+} */

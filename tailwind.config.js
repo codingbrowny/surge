@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
@@ -11,6 +12,9 @@ module.exports = {
         grayText: "#6F6A80",
         lightGray: "#F8F9FF",
         mainRed: "#FF3841",
+        deepPurple: "#b04aff",
+        lightPurple: "#7d8ef7",
+        lightBlue: "#2ea3f2",
       },
     },
   },
