@@ -45,7 +45,7 @@ export default function Home() {
                 staffing, taking your business from idea to implementation.
               </p>
             </div>
-            <div className="flex flex-col items-center justify-center w-full mt-10 lg:mt-28">
+            <div className="flex flex-col items-center justify-center w-full mt-10 lg:mt-14">
               <span className="uppercase text-lightPurple py-3">
                 Experts in
               </span>
@@ -64,7 +64,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="relative sm:px-5 md:px-20 xl:px-56 md:py-10 lg:py-16">
+        <section className="relative sm:px-5 md:px-20 xl:px-56 md:py-10 lg:py-14">
           <div className="mt-6 sm:w-[80%] lg:w-[60%] mx-auto text-center px-5 sm:px-10 md:px-0">
             <h1 className="text-2xl md:text-4xl font-semibold text-mainColor leading-8">
               Great teams are built on product + market expertise, we’ve got
