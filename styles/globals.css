@@ -38,6 +38,27 @@ body {
   }
 }
 
+.info {
+    background: linear-gradient(
+    to right,
+    #b04aff 0%,
+    #7d8ef7 40%,
+    #b04aff 90%,
+    #7d8ef7 20%,
+    #b04aff 10%
+  );
+  background-size: 200% auto;
+  animation: info 5s linear infinite;
+}
+@keyframes info {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
 /* .hero-ascent {
   background-image: url("../src/assets/images/hero.svg");
   background-repeat: no-repeat;
