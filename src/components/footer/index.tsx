@@ -7,7 +7,7 @@ import { IoLogoYoutube } from "react-icons/io";
 
 const Footer = () => {
   return (
-    <div className="grid grid-cols-1 divide-y-[0.1px] gap-10 divide-gray-700">
+    <div className="container mx-auto px-3 grid grid-cols-1 divide-y-[0.1px] gap-10 divide-gray-700">
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 w-full">
         {footerLinks.map((item, index) => (
           <div key={index} className="links-content mt-5">
