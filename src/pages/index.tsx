@@ -183,7 +183,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="w-full bg-mainColor px-5 md:px-20 xl:px-56 pt-14">
+      <footer className="w-full bg-mainColor pt-14">
         <Footer />
       </footer>
     </div>
